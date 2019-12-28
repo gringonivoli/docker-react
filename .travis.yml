@@ -5,4 +5,4 @@ before_install:
   - docker build -t gringonivoli/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run gringonivoli/docker-react npm run test
+  - docker run -e CI=true gringonivoli/docker-react npm run test

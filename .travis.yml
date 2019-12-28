@@ -1,4 +1,3 @@
-sudo: required
 services:
   - docker
 
@@ -6,4 +5,4 @@ before_install:
   - docker build -t gringonivoli/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run gringonivoli/docker-react npm run test -- --coverage
+  - docker run gringonivoli/docker-react npm run test
